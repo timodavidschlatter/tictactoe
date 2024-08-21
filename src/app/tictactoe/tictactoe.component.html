@@ -2,7 +2,7 @@
   <h1>Tic-Tac-Toe</h1>
   <div class="board">
     <div
-      *ngFor="let cell of board; let i = index"
+      *ngFor="let cell of board; let i = index; trackBy:trackByIndex"
       (click)="makeMove(i)"
       class="cell"
       [id]="'cell-' + i"

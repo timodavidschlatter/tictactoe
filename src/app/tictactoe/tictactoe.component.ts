@@ -51,4 +51,8 @@ export class TictactoeComponent {
     this.currentPlayer = 'X';
     this.winner = null;
   }
+
+  trackByIndex(index: number, item: string): number {
+    return index;
+  }
 }
