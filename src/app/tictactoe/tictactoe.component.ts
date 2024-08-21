@@ -44,6 +44,15 @@ export class TictactoeComponent {
         this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
       }
     }
+
+    if (this.checkFinishedWithoutWinner()) {
+      const audioNoWinner = new Audio('sounds/no-winner.wav');
+      audioNoWinner.play();
+    }
+  }
+
+  checkFinishedWithoutWinner() : boolean {
+    return this.board.every((element) => element !== null);
   }
 
   checkWinner(): boolean {
