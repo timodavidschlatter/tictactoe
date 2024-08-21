@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body {
+    height: 100%; /* Ensure html and body are 100% height */
+    margin: 0;    /* Remove any default margin */
+    padding: 0;   /* Remove any default padding */
+    font-family: Futura;
+  }

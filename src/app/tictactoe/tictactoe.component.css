@@ -1,0 +1,108 @@
+.game-container {
+  height:100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.board {
+  display: grid;
+  gap: 0px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  cursor: pointer;
+  border-style: solid;
+  border-color: #333;
+}
+
+#cell-0 {
+  border-width: 0px 2px 2px 0px;
+}
+
+#cell-1 {
+  border-width: 0px 2px 2px 2px;
+}
+
+#cell-2 {
+  border-width: 0px 0px 2px 2px;
+}
+
+#cell-3 {
+  border-width: 2px 2px 2px 0px;
+}
+
+#cell-4 {
+  border-width: 2px 2px 2px 2px;
+}
+
+#cell-5 {
+  border-width: 2px 0px 2px 2px;
+}
+
+#cell-6 {
+  border-width: 2px 2px 0px 0px;
+}
+
+#cell-7 {
+  border-width: 2px 2px 0px 2px;
+}
+
+#cell-8 {
+  border-width: 2px 0px 0px 2px;
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+.winner {
+  margin-top: 20px;
+  font-size: 1.5em;
+  color: green;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 599px) {
+  .board {
+    grid-template-columns: repeat(3, 80px); /* Smaller cells */
+    grid-template-rows: repeat(3, 80px);
+  }
+
+  .cell {
+    font-size: 1.5em; /* Smaller font size */
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .board {
+    grid-template-columns: repeat(3, 100px); /* Slightly larger cells */
+    grid-template-rows: repeat(3, 100px);
+  }
+
+  .cell {
+    font-size: 2em; /* Medium font size */
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .board {
+    grid-template-columns: repeat(3, 150px); /* Larger cells */
+    grid-template-rows: repeat(3, 150px);
+  }
+
+  .cell {
+    font-size: 3em; /* Larger font size */
+  }
+}
