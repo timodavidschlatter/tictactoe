@@ -21,8 +21,25 @@ export class TictactoeComponent {
   makeMove(index: number): void {
     if (!this.board[index] && !this.winner) {
       this.board[index] = this.currentPlayer;
+      
+      if (this.currentPlayer === 'X') {
+
+        const audioX = new Audio('sounds/x-sound.wav');
+        audioX.play();
+
+      } else {
+
+        const audioO = new Audio('sounds/o-sound.wav');
+        audioO.play();
+
+      }
+
       if (this.checkWinner()) {
+        
         this.winner = this.currentPlayer;
+        const audioWinner = new Audio('sounds/winner.wav');
+        audioWinner.play();
+
       } else {
         this.currentPlayer = this.currentPlayer === 'X' ? 'O' : 'X';
       }
