@@ -8,6 +8,7 @@ import { CommonModule } from '@angular/common'; // Import CommonModule
   templateUrl: './tictactoe.component.html',
   styleUrl: './tictactoe.component.css',
 })
+
 export class TictactoeComponent {
   board: string[] = [];
   currentPlayer: string = 'X';
