@@ -45,7 +45,7 @@ export class TictactoeComponent {
       }
     }
 
-    if (this.checkFinishedWithoutWinner()) {
+    if (!this.checkWinner() && this.checkFinishedWithoutWinner()) {
       const audioNoWinner = new Audio('sounds/no-winner.wav');
       audioNoWinner.play();
     }
